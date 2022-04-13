@@ -156,6 +156,9 @@ func variableTypes() {
 
 	// TODO
 	//Question - How to access real and imaginary part of complex number
+	// c := complex(23, 31)
+	// realPart := real(c)    // gets real part
+	// imagPart := imag(c)    // gets imaginary part
 	fmt.Println("Complex Number with shorthand intialization :", c2)
 
 	//iota is used for succesive number initalization
