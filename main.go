@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	// "tutorial/Day1"
-	"tutorial/Day2"
+	// "tutorial/Day2"
+	"tutorial/Day3"
 )
 
 var p = 10
@@ -23,24 +24,27 @@ func main() {
 	// Day1.Hello()
 	// Day1.Conditionals(100, 12)
 	// Day1.Loops(1, 10, 7, 2)
-	Day2.SwitchTut()
-	Day2.Array()
+	// Day2.SwitchTut()
+	// Day2.Array()
 
-	Day2.VariadicTut(13, 12)
+	// Day2.VariadicTut(13, 12)
 
-	Day2.MapTut()
+	// Day2.MapTut()
 
-	Day2.StringTut()
+	// Day2.StringTut()
 
-	Day2.PointerTut()
+	// Day2.PointerTut()
 
-	a := 10
-	Day2.PonterHelp(&a)
+	// a := 10
+	// Day2.PonterHelp(&a)
 
-	fmt.Println(a)
+	// fmt.Println(a)
 
-	fmt.Println(*(Day2.PointerHelp()))
+	// fmt.Println(*(Day2.PointerHelp()))
 
-	Day2.StructTut()
+	// Day2.StructTut()
+
+	Day3.MethodsTut()
+	Day3.InterfacesTut()
 
 }

@@ -1,6 +1,10 @@
 package Day2
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+	"strings"
+)
 
 func SwitchTut() {
 	num := 12
@@ -63,8 +67,14 @@ func VariadicTut(a ...int) {
 
 func MapTut() {
 	emp := make(map[string]int)
-	emp["manav"] = 1000
-	fmt.Println(emp)
+	// emp["manav"] = 1000
+	// fmt.Println(emp)
+
+	emp4 := make(map[string]int)
+	emp4["manav"] = 1000
+	// fmt.Println(emp4)
+
+	fmt.Println(reflect.DeepEqual(emp, emp4))
 
 	emp2 := map[string]int{
 		"steve": 100,
@@ -72,9 +82,10 @@ func MapTut() {
 	}
 	fmt.Println(emp2)
 
-	// var emp3 map[string]int
+	var emp3 map[string]int
 	// emp3["a"] = 1
 	// fmt.Println(emp3)
+	fmt.Println(reflect.DeepEqual(emp, emp3))
 
 	value, ok := emp2["manav"]
 	fmt.Println(value, ok)
@@ -82,14 +93,14 @@ func MapTut() {
 	value, ok = emp2["jamie"]
 	fmt.Println(value, ok)
 
-	for key, value := range emp2 {
-		fmt.Println(key, value)
-	}
+	// for key, value := range emp2 {
+	// 	fmt.Println(key, value)
+	// }
 
 	delete(emp2, "jamie")
-	for key, value := range emp2 {
-		fmt.Println(key, value)
-	}
+	// for key, value := range emp2 {
+	// 	fmt.Println(key, value)
+	// }
 }
 
 func StringTut() {
@@ -100,6 +111,10 @@ func StringTut() {
 	}
 	println()
 	st := []rune(s)
+
+	snew := strings.Clone(s)
+
+	fmt.Println(snew)
 
 	for i := 0; i < len(st); i++ {
 		fmt.Printf("%c ", st[i])
