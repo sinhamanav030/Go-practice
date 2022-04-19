@@ -3,6 +3,7 @@ package Day4
 import (
 	"encoding/json"
 	"fmt"
+	"runtime"
 	"sync"
 
 	// "strings"
@@ -11,6 +12,9 @@ import (
 
 func concur() {
 	fmt.Println("Hello from concur")
+}
+func init() {
+	fmt.Println(runtime.GOMAXPROCS(1))
 }
 
 func numbers() {
