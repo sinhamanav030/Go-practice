@@ -7,7 +7,8 @@ import (
 	// "tutorial/Day3"
 	// "tutorial/Day4"
 	// "tutorial/Day4"
-	"tutorial/Day5"
+	// "tutorial/Day5"
+	"tutorial/Day6"
 	// "tutorial/tasks"
 )
 
@@ -57,7 +58,11 @@ func main() {
 	// Day4.BufferedChannelTut()
 	// Day4.EncodingTut()
 	// Day4.WaitGroupTut()
-	Day5.WorkerPoolTut()
-	// Day5.SelectTut()
+	// Day5.WorkerPoolTut()
 
+	// Day5.SelectTut()
+	// Day6.ConcucrTut()
+	// Day6.PipeLineTut()
+	// Day6.FanInTut()
+	Day6.FanInFanoutTut()
 }
