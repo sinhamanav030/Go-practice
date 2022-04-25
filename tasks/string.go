@@ -3,6 +3,7 @@ package tasks
 import (
 	"fmt"
 	"strings"
+	"sync"
 )
 
 func ReverseWords() {
@@ -31,31 +32,81 @@ func ReverseWords() {
 
 // import "fmt"
 
-func producer(chnl chan rune, str string, str2 string) {
+func producer(chnl chan rune, str1 string, str2 string) {
+	var wg sync.WaitGroup
+	wg.Add(1)
 	go func() {
-		for _, v := range []rune(str) {
+		for _, v := range []rune(str1) {
 			chnl <- v
 		}
-
+		wg.Done()
 	}()
 
 	go func() {
+		wg.Wait()
 		for _, v := range []rune(str2) {
 			chnl <- v
 		}
+		defer close(chnl)
 	}()
 
-	defer close(chnl)
 	// send each character of a string to channel
 
 }
-func main() {
-	ch := make(chan rune)
+func ChannelTask() {
+	ch1 := make(chan rune)
+	// ch2 := make(chan rune)
 	str := "Manav"
 	str2 := "Sinha"
-	producer(ch, str, str2)
-	for v := range ch {
+	producer(ch1, str, str2)
+	for v := range ch1 {
 		fmt.Printf("%c", v)
 	}
+	fmt.Println()
 	//receive the characters of a string from channel
+}
+
+func producerSelect(chnl1 chan rune, chnl2 chan rune, s1 string, s2 string) {
+	for _, v := range []rune(s1) {
+		chnl1 <- v
+	}
+	defer close(chnl1)
+
+	for _, v := range []rune(s2) {
+		chnl2 <- v
+	}
+	defer close(chnl2)
+	// q <- true
+}
+
+func ChannelTaskSelect() {
+	ch1 := make(chan rune)
+	ch2 := make(chan rune)
+	str := "Manav"
+	str2 := "Sinha"
+	go producerSelect(ch1, ch2, str, str2)
+	// for v := range ch1 {
+	// 	fmt.Printf("%c", v)
+	// }
+	for {
+		flag := false
+		select {
+		// case <-q:
+		// 	flag = true
+		case v, ok := <-ch1:
+			fmt.Printf("%c", v)
+			if ok == false {
+				fmt.Println()
+			}
+		case v, ok := <-ch2:
+			fmt.Printf("%c", v)
+			if ok == false {
+				flag = true
+			}
+		}
+		if flag {
+			break
+		}
+	}
+	fmt.Println()
 }
