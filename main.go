@@ -10,11 +10,13 @@ import (
 	// "tutorial/Day5"
 	// "tutorial/Day6"
 	// "tutorial/Day7"
-	"tutorial/Day8"
+	// "tutorial/Day8"
+	// "fmt"
+	"tutorial/Day9"
 	// "tutorial/tasks"
 )
 
-var p = 10
+// var p = 10
 
 // func init() {
 // 	fmt.Println("Main Package Initialized")
@@ -70,7 +72,21 @@ func main() {
 	// Day7.DeferTut()
 	// Day7.ErrorTut()
 	// Day7.GoThread()
-	Day8.DnsErrorTut()
-	Day8.CustomErrorTut()
+	// Day8.DnsErrorTut()
+	// Day8.CustomErrorTut()
 	// tasks.ChannelTaskSelect()
+	// Day9.ErrorTut()
+	// v, err := Day9.Sqrt(-15)
+	// if err != nil {
+	// 	panic(err)
+	// } else {
+	// 	fmt.Println(v)
+	// }
+
+	// Day9.FirstClassFunctionTut()
+	// Day9.PanicRecoverTut()
+	// Day9.ReflectionTut()
+	// Day9.FileHandTut()
+	Day9.BuffIoTut()
+	Day9.FileWriteTut()
 }
