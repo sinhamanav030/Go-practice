@@ -1,0 +1,4 @@
+one
+{{range .}}
+{{.Name}} - {{.Sno}}
+{{end}}
