@@ -3,3 +3,4 @@ two
     {{. |uc |lc |uc}}
 }}
 {{end}}
+{{template "hello" .}}

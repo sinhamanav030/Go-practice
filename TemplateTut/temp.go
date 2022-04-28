@@ -87,10 +87,82 @@ func FuncBindTut() {
 	}
 
 	tpl := template.Must(template.New("").Funcs(fm).ParseFiles("./TemplateTut/two.txt"))
-
+	tpl, err := tpl.ParseFiles("./TemplateTut/one.txt")
 	fruits := []string{"orange", "mango", "banana"}
-	err := tpl.ExecuteTemplate(os.Stdout, "two.txt", fruits)
+	err = tpl.ExecuteTemplate(os.Stdout, "two.txt", fruits)
 	if err != nil {
 		log.Fatalln(err)
 	}
+
+}
+
+type course struct {
+	Number string
+	Name   string
+	Units  string
+}
+
+type semester struct {
+	Term    string
+	Courses []course
+}
+
+type year struct {
+	AcaYear string
+	Fall    semester
+	Spring  semester
+	Summer  semester
+}
+
+func Task1() {
+
+	tpl := template.Must(template.ParseFiles("./TemplateTut/Files/task1.gohtml"))
+	years := []year{
+		year{
+			AcaYear: "2020-2021",
+			Fall: semester{
+				Term: "Fall",
+				Courses: []course{
+					course{"CSCI-40", "Introduction to Programming in Go", "4"},
+					course{"CSCI-130", "Introduction to Web Programming with Go", "4"},
+					course{"CSCI-140", "Mobile Apps Using Go", "4"},
+				},
+			},
+			Spring: semester{
+				Term: "Spring",
+				Courses: []course{
+					course{"CSCI-50", "Advanced Go", "5"},
+					course{"CSCI-190", "Advanced Web Programming with Go", "5"},
+					course{"CSCI-191", "Advanced Mobile Apps With Go", "5"},
+				},
+			},
+		},
+		year{
+			AcaYear: "2021-2022",
+			Fall: semester{
+				Term: "Fall",
+				Courses: []course{
+					course{"CSCI-40", "Introduction to Programming in Go", "4"},
+					course{"CSCI-130", "Introduction to Web Programming with Go", "4"},
+					course{"CSCI-140", "Mobile Apps Using Go", "4"},
+				},
+			},
+			Spring: semester{
+				Term: "Spring",
+				Courses: []course{
+					course{"CSCI-50", "Advanced Go", "5"},
+					course{"CSCI-190", "Advanced Web Programming with Go", "5"},
+					course{"CSCI-191", "Advanced Mobile Apps With Go", "5"},
+				},
+			},
+		},
+	}
+
+	task1, err := os.Create("./TemplateTut/Output/task1.html")
+
+	err = tpl.Execute(task1, years)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 }

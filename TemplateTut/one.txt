@@ -1,4 +1,5 @@
-one
+{{define "hello"}}
 {{range .}}
-{{.Name}} - {{.Sno}}
+{{.}}
+{{end}}
 {{end}}
