@@ -69,4 +69,5 @@ func ReadCSV() {
 			score++
 		}
 	}
+	fmt.Printf("\nQuiz Complete\nYour Score : %d out of %d \n", score, total)
 }
