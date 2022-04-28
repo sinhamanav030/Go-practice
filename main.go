@@ -1,8 +1,13 @@
 package main
 
-import Templatetut "WEB/TemplateTut"
+import (
+	"WEB/TcpTut"
+	// Templatetut "WEB/TemplateTut"
+)
 
 func main() {
 	// Templatetut.TemplateTut()
-	Templatetut.FuncBindTut()
+	// Templatetut.FuncBindTut()
+	TcpTut.Conn()
+
 }
