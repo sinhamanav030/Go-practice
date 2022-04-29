@@ -8,6 +8,8 @@ import (
 func main() {
 	// Templatetut.TemplateTut()
 	// Templatetut.FuncBindTut()
-	TcpTut.Conn()
+	// TcpTut.Conn()
+	// TcpTut.EncConn()
+	TcpTut.HttpServer()
 
 }
