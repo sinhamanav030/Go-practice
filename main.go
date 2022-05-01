@@ -1,10 +1,10 @@
 package main
 
-import (
-	Httptut "WEB/HttpTut"
-	// "WEB/TcpTut"
-	// Templatetut "WEB/TemplateTut"
-)
+import Employeeapp "WEB/Employee-app"
+
+// Httptut "WEB/HttpTut"
+// "WEB/TcpTut"
+// Templatetut "WEB/TemplateTut"
 
 func main() {
 	// Templatetut.TemplateTut()
@@ -15,5 +15,6 @@ func main() {
 	// Httptut.HttpServer()
 	// Httptut.HelloWorldHttpServer()
 	// Httptut.HttpServerTut()
-	Httptut.HttpServeFileTut()
+	// Httptut.HttpServeFileTut()
+	Employeeapp.HttpServer()
 }

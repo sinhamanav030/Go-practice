@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="./index.js"></script>
+    <style>
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 2px;
+        }
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body onload="getData()">
+    <header>
+        <div class="container-l">
+            <img src="./Images/logo.png" alt="">
+        </div>
+        <div class="container-l">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./add.html">ADD</a>
+                </li> -->
+            </ul>
+        
+        </div>    
+    </header>
+    <br>
+    <div class="container">
+        <h2>Employees</h1>
+        <table id ="Employee-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Designation</th>
+                        <th>Date of Birth</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+        </table>
+    </div>
+
+    <div class="container">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addForm">Add Employee</button>
+
+        <div class="modal fade" id="addForm" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">ADD Employee</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-md">
+
+                            <form id="Add-employee">
+                                <h2>Register New User</h2>
+                                <div class="form-group">
+                                    <label for="name">Name :</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Code">Code</label>
+                                    <input type="text" name="code" class="form-control" placeholder="Enter Code">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input type="text" name="email" id="" class="form-control">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="Gender">Gender</label>
+                                    <div class="form-check">
+                                        <input type="radio" name="gender" id="" value="Male" class="form-check-input">
+                                        <label for="Male" class="form-check-label">Male</label>
+                                        
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="gender" id="" value="Female" class="form-check-input">
+                                        <label for="Female" class="form-check-label"></label>Female
+                                        
+                                    </div>
+                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="designation">Designation</label>
+                                    <input type="text" name="des" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Date">Date of birth</label>
+                                    <input type="date" name="dob" id="" class="form-control">
+                                </div>
+                                <br>
+                                <input type="submit" value="Submit" class="btn btn-primary" onclick="processForm()">
+                            </form>
+                        </div>
+                                        </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+    </div>
+
+
+    <div class="container">
+
+        <div id="updateModal" class="modal fade" role="dialogg">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Update User</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form">
+                            <div class="form-group">
+                                <label>Name :</label>
+                                <input type="text" name="name" id="" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Code</label>
+                                <input type="text" name="code" id="update-code" class="form-control" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label>Email :</label>
+                                <input type="text" name="email" id="" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="form-check">
+                                    <input type="radio" name="gender" id="" value="Male" class="form-check-input">
+                                    <label for="Male" class="form-check-label">Male</label>
+                                    
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" name="gender" id="" value="Female" class="form-check-input">
+                                    <label for="Female" class="form-check-label"></label>Female
+                                    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Designation</label>
+                                <input type="text" name="des" id="" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Date Of Birth :</label>
+                                <input type="date" name="dob" id="" class="form-control">
+                            </div>
+                            <br>
+                            <input type="submit" value="Submit" onclick="processUpdateForm()" class="btn btn-primary">
+                        </form>              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
