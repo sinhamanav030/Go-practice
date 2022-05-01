@@ -1,7 +1,8 @@
 package main
 
 import (
-	"WEB/TcpTut"
+	Httptut "WEB/HttpTut"
+	// "WEB/TcpTut"
 	// Templatetut "WEB/TemplateTut"
 )
 
@@ -10,6 +11,9 @@ func main() {
 	// Templatetut.FuncBindTut()
 	// TcpTut.Conn()
 	// TcpTut.EncConn()
-	TcpTut.HttpServer()
-
+	// TcpTut.HttpServer()
+	// Httptut.HttpServer()
+	// Httptut.HelloWorldHttpServer()
+	// Httptut.HttpServerTut()
+	Httptut.HttpServeFileTut()
 }
