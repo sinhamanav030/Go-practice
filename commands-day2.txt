@@ -1,0 +1,267 @@
+    1  ls
+    2  sudo apt update; sudo apt upgrade
+    3  cd Downloads/
+    4  sudo dpkg -i google-chrome-stable_current_amd64.deb 
+    5  chrome
+    6  sudo dpkg -i google-chrome-stable_current_amd64.deb 
+    7  sudo apt get
+    8  sudo apt --fix-missing update
+    9  tty
+   10  sudo cat /etc/shells
+   11  echo $PATH
+   12  cal 12 2017
+   13  cal
+   14  cal -A
+   15  cal 12
+   16  clear
+   17  ls
+   18  cd Downloads/
+   19  cd ..
+   20  ls
+   21  cd ..
+   22  ls
+   23  env
+   24  cd
+   25  ls
+   26  vi test.txt
+   27  history
+   28  ls
+   29  cd Documents/
+   30  history > commands-pt1.txt
+   31  cd ..
+   32  ls
+   33  ls -a
+   34  cd .
+   35  ls
+   36  ls -a
+   37  cd .
+   38  cd home/
+   39  cd manav/
+   40  sudo cd ~/./ssh
+   41  cd ~/./ssh
+   42  cd /~/./ssh
+   43  cd ~/.ssh
+   44  ls
+   45  ssh-keygen -t rsa
+   46  ls
+   47  cat id_rsa
+   48  cat id_rsa.pub
+   49  clear
+   50  man man
+   51  man -k "copy"
+   52  mana man
+   53  man man
+   54  man zip
+   55  man 2 fork
+   56  man 3 fork
+   57  man  fork
+   58  man fork
+   59  man -k "fork"
+   60  man cp
+   61  history
+   62  cat shells
+   63  sudo cat shells
+   64  cd ..
+   65  sudo cat shells
+   66  cd ..
+   67  sudo cat shells
+   68  /etc/shells
+   69  sudo /etc/shells
+   70  sudo cat /etc/shells
+   71  ech $PATH
+   72  echo $PATH
+   73  ping www.google.com &
+   74  fg
+   75  cd ..
+   76  cd home/
+   77  cd manav/
+   78  nohup ping www.google.com > g_text.txt
+   79  cat g_text.txt 
+   80  ps aux
+   81  kil 5888
+   82  kill 5888
+   83  tail -f g_out.txt
+   84  ls
+   85  tail -f g_text.txt
+   86  nohup ping www.google.com > g_text.txt
+   87  nohup ping www.google.com > g_text.txt &
+   88  kill 6057
+   89  tail -f g_text.txt
+   90  ps aux
+   91  clear
+   92  echo $SHELL
+   93  sudo cat etc/shells
+   94  sudo cat /etc/shells
+   95  echo $PATH
+   96  cat shells
+   97  tty
+   98  clear
+   99  tty
+  100  ls
+  101  man -k "delete"
+  102  rm g_text.txt 
+  103  ls
+  104  cd Documents/
+  105  history >commands-day1.txt 
+  106  rm commands-pt1.txt 
+  107  pwd
+  108  cd
+  109  hostname
+  110  hostname -i
+  111  echo $SHELL
+  112  tty
+  113  cat "in terminal 1 to terminal 2" > /dev/pts/0
+  114  cat > /dev/pts/1
+  115  clear
+  116  tty
+  117  cat > /dev/pts/0
+  118  clear
+  119  tty
+  120  cat > /dev/pts/1
+  121  clear
+  122  is
+  123  Is
+  124  cd Documents/
+  125  ls
+  126  cp commands-day1.txt ../Bootcamp/Linux
+  127  cd ..
+  128  mkdir Bootcamp
+  129  cd Bootcamp/
+  130  mkdir Linux
+  131  cd ../Documents/
+  132  cp commands-day1.txt ../Bootcamp/Linux
+  133  cd ../Bootcamp/Linux/
+  134  mv commands-day1.txt ../../Documents/
+  135  cd ../../Documents/
+  136  mv commands-day1.txt ../Bootcamp/Linux/
+  137  touch temp.txt
+  138  cat temp.txt
+  139  rm temp.txt 
+  140  locate -i commands-day1.txt
+  141  sudo apt install locate
+  142  locate -i commands-day1.txt
+  143  locate -i commands
+  144  cd ../
+  145  locate -i commands
+  146  clear
+  147  tty
+  148  find . -commands
+  149  locate -i commands
+  150  cd Documents/
+  151  cd ../Bootcamp/
+  152  cd lInux
+  153  cd li
+  154  cd Linux/
+  155  locate -i commands
+  156  ls
+  157  locate -i com
+  158  df
+  159  df -m
+  160  du
+  161  du -h
+  162  head commands-day1.txt 
+  163  ls
+  164  locate -i com
+  165  locate -i commands-day1.txt
+  166  find . -comm
+  167  find . -commands-day1.txt
+  168  find . -name commands-day1.txt
+  169  find . -name comm
+  170  cd ..
+  171  find . -name commands-day1.txt
+  172  man grep
+  173  grep -i ./Bootcamp/Linux/commands-day1.txt 
+  174  grep -i "cat" ./Bootcamp/Linux/commands-day1.txt 
+  175  grep -c "cat" ./Bootcamp/Linux/commands-day1.txt 
+  176  grep -l "cat" *
+  177  cd Bootcamp/Linux/
+  178  awk '/-i/ {print}' commands-day1.txt 
+  179  tty
+  180  cd -
+  181  cd-
+  182  cd Bootcamp/
+  183  cd -
+  184  tree
+  185  sudo apt install tree
+  186  ls -a
+  187  ls
+  188  ls -al
+  189  clear
+  190  ls
+  191  cd Bootcamp/
+  192  cd ..
+  193  sudo apt update
+  194  sudo apt install apache2
+  195  cd /etc/apache2/
+  196  ls
+  197  cd sites-enabled/
+  198  ls
+  199  cd ../../..
+  200  cd var
+  201  cd www
+  202  ls
+  203  cd html/
+  204  ls
+  205  vi index.html 
+  206  cd ..
+  207  cd
+  208  cd /etc/apache2/
+  209  ls
+  210  netstat
+  211  sudo apt install net-tools
+  212  netstat
+  213  ls
+  214  cd sites-available/
+  215  ls
+  216  cd ..
+  217  cd sites-enabled/
+  218  ls
+  219  vi 000-default.conf 
+  220  cd
+  221  cd ../../var/www
+  222  ls -lrt
+  223  NNECTED     82897    
+  224  sudo mkdir /var/www/localhost
+  225  sudo chown -R $USER:$USER /var/www/localhost
+  226  sudo chmod -R 755 /var/www/localhost/
+  227  sudo nano /var/www/localhost/index.html
+  228  sudo nano /etc/apache2//sites-available/localhost.conf
+  229  sudo ad2ensite localhost.conf
+  230  sudo a2ensite localhost.conf
+  231  systemctl reload apache2
+  232  sudo a2ensite localhost.conf
+  233  sudo a2dissite 000-default.conf
+  234  sudo apache2ctl configtest
+  235  systemctl restart apache2
+  236  sudo a2dissite 000-default.conf
+  237  systemctl restart apache2
+  238  cd /etc/apache2/sites-available/
+  239  ls
+  240  sudo a2ensite localhost.conf
+  241  sudo a2dissite 000-default.conf
+  242  sudo apache2ctl configtest 
+  243  sudo nano localhost.conf 
+  244  sudo a2ensite localhost.conf
+  245  sudo a2dissite 000-default.conf
+  246  sudo apache2ctl configtest 
+  247  cd /var/www/
+  248  ls
+  249  cd localhost/
+  250  sudo nano index.html
+  251  ls
+  252  cd /etc/apache2/sites-available/
+  253  ls
+  254  sudo nano localhost.conf 
+  255  ls
+  256  cat localhost.conf 
+  257  sudo a2dissite 000-default.conf
+  258  systemctl restart apache2
+  259  cd ../../
+  260  cd ../
+  261  cd home/
+  262  cd manav/
+  263  cd Bootcamp/
+  264  cd Linux/
+  265  ls
+  266  history commands-day2.txt
+  267  history >commands-day2.txt
