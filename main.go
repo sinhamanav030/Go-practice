@@ -13,6 +13,7 @@ func main() {
 	// QuizGame.ReadCSV()
 	// TcpTut.Conn()
 	// statesession.UrlPassTut(
-	statesession.FileHandleTut()
-
+	// statesession.FileHandleTut()
+	// statesession.CookieTut()
+	statesession.UUIDTut()
 }
