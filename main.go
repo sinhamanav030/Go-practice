@@ -1,6 +1,10 @@
 package main
 
-import statesession "WEB/StateSession"
+import (
+	databasetut "WEB/DatabaseTut"
+)
+
+// import statesession "WEB/StateSession"
 
 // Templatetut "WEB/TemplateTut"
 // "WEB/QuizGame"
@@ -15,5 +19,15 @@ func main() {
 	// statesession.UrlPassTut(
 	// statesession.FileHandleTut()
 	// statesession.CookieTut()
-	statesession.UUIDTut()
+	// statesession.UUIDTut()
+	// databasetut.GetInfo()
+	// databasetut.Create()
+	// databasetut.Insert()
+	// databasetut.Update()
+	// fmt.Println("before:")
+	// databasetut.Read()
+	// databasetut.Delete()
+	// fmt.Println("After:")
+	// databasetut.Read()
+	databasetut.ConnectMdb()
 }
