@@ -1,7 +1,7 @@
 package main
 
 import (
-	databasetut "WEB/DatabaseTut"
+	"WEB/wedevtoolkit"
 )
 
 // import statesession "WEB/StateSession"
@@ -29,5 +29,9 @@ func main() {
 	// databasetut.Delete()
 	// fmt.Println("After:")
 	// databasetut.Read()
-	databasetut.ConnectMdb()
+	// databasetut.ConnectMdb()
+	// wedevtoolkit.HmacTut()
+	wedevtoolkit.EncodingTut()
+	// wedevtoolkit.ContextTut()
+	// wedevtoolkit.HttpsTut()
 }
