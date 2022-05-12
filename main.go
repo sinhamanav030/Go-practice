@@ -1,7 +1,8 @@
 package main
 
 import (
-	"WEB/wedevtoolkit"
+	_ "WEB/postgrestut"
+	// "WEB/wedevtoolkit"
 )
 
 // import statesession "WEB/StateSession"
@@ -31,7 +32,7 @@ func main() {
 	// databasetut.Read()
 	// databasetut.ConnectMdb()
 	// wedevtoolkit.HmacTut()
-	wedevtoolkit.EncodingTut()
+	// wedevtoolkit.EncodingTut()
 	// wedevtoolkit.ContextTut()
 	// wedevtoolkit.HttpsTut()
 }
